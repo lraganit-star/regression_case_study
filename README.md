@@ -18,13 +18,13 @@ We found the following columns had Pearson correlations above .25.:
 
 
  
- **3) Our next step was to Train-Test-Split our data and set up our method of cross validation and set our Test Data validation to .25.**
+**3) Our next step was to Train-Test-Split our data and set up our method of cross validation and set our Test Data validation to .25.**
 
 
-**4) We fit Ridge regression, leaving out geographic data columns that were nonsensical to the tests we were running. **
+**4) We fit Ridge regression, leaving out geographic data columns that were nonsensical to the tests we were running.**
 
 
-**5) We wrote a function to find the Mean Squared error of our Ridge Regression on our Test and predicted Y values: **
+**5) We wrote a function to find the Mean Squared error of our Ridge Regression on our Test and predicted Y values:**
 
   We found the Mean Squared Error with an alpha (lambda) at .05 to be **20317.47**.
 
