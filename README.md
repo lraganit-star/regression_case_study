@@ -53,19 +53,15 @@ alpha = 2950
 ![alt text](https://github.com/kyle-black/regression_case_study/blob/main/images/ridge_regression_standard_coefficient_paths.png)
 
 
-**9)We repeated the same process, but this time we used Lasso regression.**
-
-
-![alt text](https://github.com/lraganit-star/regression_case_study/blob/main/images/LASSO_regression_standardized_coefficient_paths_pt2.png)
-
-
-**11) We found the optimum alpha for the Lasso regression for the Train and Test Mean Squared Error.**
+**9)We repeated the same process, but this time we used Lasso regression. We found the optimum alpha for the Lasso regression for the Train and Test Mean Squared Error.**
 
 ![alt_text](https://github.com/lraganit-star/regression_case_study/blob/main/images/LASSO_regression_train_and_test_MSE.png)
+![alt text](https://github.com/lraganit-star/regression_case_study/blob/main/images/LASSO_regression_standardized_coefficient_paths.png)
+
 
 The optimal alpha for the lasso regression is : **0.0009636864286572604**
 
-**12) We compared the RSS for our Ridge, Lasso and Linear Regression:
+**10) We compared the RSS for our Ridge, Lasso and Linear Regression:
  
  Final Ridge RSS: 0.633
  
@@ -76,13 +72,20 @@ The optimal alpha for the lasso regression is : **0.0009636864286572604**
  Lasso has the lowest RSS. So we believe that is our best model.
  
  
- **13) We begin feature engineering on our Lasso model.**
+ **11) To help determine which features we should remove we also did OLS regression. Here is the result.**
+ From this result we find some features with a p-value higher than .05. We also find these features have coefficients close to 0 in the Lasso Regression. This means these two regressions give us consistent results about which feature we should keep and remove. 
+ 
+ ![alt test](https://github.com/lraganit-star/regression_case_study/blob/main/images/OLS.png) 
  
  
+ **12) The p-values of MSM12MTH', 'MSM5YEAR', '%msm12month', '%msm5yr' are above 0.05, but since they are highly related to each other we decided to only keep one.**
  
  
+ **13) We removed uneccesary features and ran Lasso Regression again. 
  
+ ![alt_text](https://github.com/lraganit-star/regression_case_study/blob/main/images/LASSO_regression_train_and_test_MSE_pt2.png)
+ 
+ ![alt text](https://github.com/lraganit-star/regression_case_study/blob/main/images/LASSO_regression_standardized_coefficient_paths_pt2.png)
 
-
-
+ ![alt test](https://github.com/lraganit-star/regression_case_study/blob/main/images/OLS_pt2.png)
 
