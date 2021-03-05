@@ -65,8 +65,11 @@ Then plotted the Ridge Regression Train and Test Mean Squared error. With Mean S
 The optimal alpha for the lasso regression is : **0.0009636864286572604**
 
 **12) We compared the RSS for our Ridge, Lasso and Linear Regression:
+ 
  Final Ridge RSS: 0.633
+ 
  Final Lasso RSS: 0.516
+ 
  Final Linear Regression RSS: 0.517**
  
  Lasso has the lowest RSS. So we believe that is our best model.
