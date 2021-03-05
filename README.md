@@ -1,55 +1,55 @@
-# Forecasting-HIV-Infections Case Study
-- [Forecasting-HIV-Infections Case Study](#forecasting-hiv-infections-case-study)
-  - [Case Study Goal](#case-study-goal)
-  - [Background](#background)
-  - [Data](#data)
-    - [Data merging](#data-merging)
-  - [Credit](#credit)
-## Case Study Goal
-1)	To accurately model HIV `incidences` (new infections per 100,000) in US
-counties by building a linear regression model that utilizes HIV infection data, census data, data on the opioid crisis, and data on sexual orientation.
 
-2)	Identify features that are the most significant drivers of HIV infection rates and learn how these drivers differ between different regions.
-
-## Background
-Due to the development of anti-retroviral therapies the HIV/AIDS epidemic is 
-generally considered to be under control in the US.  However, as of 2015 there 
-were 971,524 people living with diagnosed HIV in the US with an estimation of 
-37,600 new HIV diagnoses in 2014.  HIV infection rates continue to be particularly
-problematic in communities of color, among men who have sex with men (MSM), the
-transgender community, and other vulnerable populations in the US. Socioeconomic 
-factors are a significant risk factor for HIV infection and likely contribute 
-to HIV infection risk in these communities.  The current US opioid crisis has 
-further complicated the efforts to combat HIV with HIV infection outbreaks now 
-hitting regions that weren’t previously thought to be vulnerable to such outbreaks.  
-
-A model that can accurately forecast regional HIV infection rates would be 
-beneficial to local public health officials.  Provided with this information, 
-these officials will be able to better marshal the resources necessary to combat
-HIV and prevent outbreaks from occurring.  Accurate modeling will also identify 
-risk factors for communities with high HIV infection rates and provide clues 
-as to how officials may better combat HIV in their respective communities.
+**HIV Regression Case Study**
 
 
-## Data
+Using the merged HIV models. We wanted to find out with combination of predictors (X) created the best prediction of out target (Y). In our case we want to compare OLS regression against Ridge Regression and Lasso Regression to see which model return the lowest Mean Squared Error. 
+
+Then we will take the best model and features to fit our new regression line.
 
 
-The `./data` folder contains data from three publically available sources.  Groups should feel
-free to supplement this data if they wish.
-1. The largest collection of HIV and opioid data was obtained from the [opioid database](http://opioid.amfar.org/) maintained by the American Foundation for AIDS Research (amfAR).  
-2. Demographic and economic data were obtained from the 5yr - American Community Survey which are available at the [US census bureau website](https://factfinder.census.gov/faces/nav/jsf/pages/searchresults.xhtml?refresh=t).
-3. Estimates for the [MSM population](http://emorycamp.org/item.php?i=48) in each county were obtained from the Emory Coalition for Applied Modeling for Prevention (CAMP).
+**1) We took in the merged Data frames and dropped the na values.**
 
-Data dictionaries that indicate what each column in the data means are included in the folder associated with each data set.
+**2) During our EDA we looked at the The initial  Pearson correlations between the features as it related to our target variable  “HIVincidence” (#of cases / population). ** 
 
-## Data merging  
+We found the following columns had Pearson correlations above .25.:
 
-The `merge_data.ipynb` notebook reads and merges most of the data in the 
-`data` folder into one dataframe.  Read through and execute this notebook cell-by-cell to
-better understand the data and bring it together for EDA.
+**HIV drag, HIV inched  MH_fac      Med_mh_Fac.  Med_sa_fac    Med SMAT _fac.   TMAT.    Plhiv.  SmATred_fac          Tmat_fa              bup_phys.         %msm12month           %msm5ye**    
 
 
-## Credit
-This case study is based on [Eric Logue's capstone project](https://github.com/elogue01/Forecasting-HIV-Infections).  
-You may wish to consult his Github repository devoted to this analysis for inspiration and insight.
-# regression_case_study
+
+
+**3) Our next step was to Train-Test-Split our data and set up our method of cross validation and set our Test Data validation to .25.**
+
+
+**4) We fit Ridge regression, leaving out Geographic data columns that were nonsensical to the tests we were running. **
+
+
+**5) We wrote a function to find the Mean Squared error of our Ridge Regression on our Test and predicted Y values: **
+
+  We found the Mean Squared Error with an alpha (lambda) at .05 to be **20317.47**.
+
+
+**6) In a 10 fold cross validation function we estimated the error of the model using our Ridge Regression:**
+
+Our Mean Training Cross Validation error is **.38**
+And our Test cross validation error is **.87**
+
+
+
+ 
+**7) Then we  performed cross validation on different values of alpha.**
+
+
+
+
+**8)  We found the optimal alpha on the for the mean cross validation errors test. 
+Then plotted the Ridge Regression Train and Test Mean Squared error. With Mean Squared Error as Mean Squared Error on the Y-axis and the log of alphas on the X-axis**
+
+
+
+**9) We took the individual coefficient paths and plotted them against alphas.**
+
+![alt text](https://github.com/kyle-black/regression_case_study/blob/main/images/ridge_regression_standard_coefficient_paths.png)
+
+
+**10)
