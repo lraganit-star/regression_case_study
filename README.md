@@ -81,7 +81,7 @@ The optimal alpha for the lasso regression is : **0.0009636864286572604**
  **12) The p-values of MSM12MTH', 'MSM5YEAR', '%msm12month', '%msm5yr' are above 0.05, but since they are highly related to each other we decided to only keep one.**
  
  
- **13) We removed uneccesary features and ran Lasso Regression again. 
+ **13) We removed uneccesary features and ran Lasso Regression again.** 
  
  ![alt_text](https://github.com/lraganit-star/regression_case_study/blob/main/images/LASSO_regression_train_and_test_MSE_pt2.png)
  
