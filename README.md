@@ -9,7 +9,7 @@ Then we will take the best model and features to fit our new regression line.
 
 **1) We took in the merged Data frames and dropped the na values.**
 
-**2) During our EDA we looked at the The initial  Pearson correlations between the features as it related to our target variable  “HIVincidence” (#of cases / population). ** 
+**2) During our EDA we looked at the The initial  Pearson correlations between the features as it related to our target variable  “HIVincidence” (#of cases / population).** 
 
 We found the following columns had Pearson correlations above .25.:
 
