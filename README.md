@@ -72,6 +72,10 @@ The optimal alpha for the lasso regression is : **0.0009636864286572604**
  Lasso has the lowest RSS. So we believe that is our best model.
  
  
+ **13) We begin feature engineering on our Lasso model.
+ 
+ 
+ 
  
  
 
