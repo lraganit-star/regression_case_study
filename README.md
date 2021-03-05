@@ -58,7 +58,7 @@ Then plotted the Ridge Regression Train and Test Mean Squared error. With Mean S
 ![alt text](https://github.com/lraganit-star/regression_case_study/blob/main/images/LASSO_regression_standardized_coefficient_paths_pt2.png)
 
 
-**11) We found the optimum alpha for the Lasso regression for the Train and Test Mean Squared Error.
+**11) We found the optimum alpha for the Lasso regression for the Train and Test Mean Squared Error.**
 
 ![alt_text](https://github.com/lraganit-star/regression_case_study/blob/main/images/LASSO_regression_train_and_test_MSE_pt2.png)
 
