@@ -2,14 +2,14 @@
 # HIV Regression Case Study
 
 
-Using the merged HIV models. We wanted to find out which combination of predictors (X) created the best prediction for our target (Y). In our case we want to compare OLS regression against Ridge Regression and Lasso Regression to see which model return the lowest Mean Squared Error. 
-
-Then we will take the best model and features to fit our new regression line.
+Using the merged HIV models. We wanted to find out which combination of predictors (X) created the best prediction for our target (Y). In our case we want to compare Linear Regression against Ridge Regression and Lasso Regression to see which model return the lowest Mean Squared Error.  From the best fit regression we will choose the most influential features with help of OLS Regression. 
 
 
-**1) We took in the merged Data frames and dropped the na values.**
 
-**2) During our EDA we looked at the The initial  Pearson correlations between the features as it related to our target variable  “HIVincidence” (#of cases / population).** 
+
+**1) We took in the merged Data Frames and dropped the nan values.**
+
+**2) During our EDA we looked at the The initial  Pearson correlations between the features as it related to our target variable  “HIVprevalence” (#of cases / population).** 
 
 We found the following columns had Pearson correlations above .25.:
 
@@ -18,15 +18,16 @@ We found the following columns had Pearson correlations above .25.:
 
 
  
-**3) Our next step was to Train-Test-Split our data and set up our method of cross validation and set our Test Data validation to .25.**
+**3) Our next step was to Train-Test-Split into 75% for training and 25% for testing.**
 
 
-**4) We fit Ridge regression, leaving out geographic data columns that were nonsensical to the tests we were running.**
+**4) We fit Ridge Regression, leaving out geographic data columns that were nonsensical to the tests we were running.**
 
 
-**5) We wrote a function to find the Mean Squared error of our Ridge Regression on our Test and predicted Y values:**
+**5) We wrote a function to find the Mean Squared error of our Ridge Regression on our Test values and predicted Y values:**
+We found the Mean Squared Error with an alpha (lambda) at .05 to be **20317.47**.
 
-  We found the Mean Squared Error with an alpha (lambda) at .05 to be **20317.47**.
+
 
 
 **6) In a 10 fold cross validation function we estimated the error of the model using our Ridge Regression:**
@@ -34,22 +35,27 @@ We found the following columns had Pearson correlations above .25.:
 Our Mean Training Cross Validation error is **.38**
 And our Test cross validation error is **.87**
 
+It is expected our training error is less than our test error. Since the gap between the errors is large we can expect that we won't be using Ridge Regression.
+
+
+
 
 
  
-**7) Then we  performed cross validation on different values of alpha.**
+**7) Then we  performed cross validation on different values of alpha. We found the optimal alpha for the mean cross validation.**
+alpha = 2950 
+
+![alt test](https://github.com/lraganit-star/regression_case_study/blob/main/images/ridge_regression_train_test_MSE.png)
 
 
-
-
-**8)  We found the optimal alpha on the for the mean cross validation errors test. 
-Then plotted the Ridge Regression Train and Test Mean Squared error. With Mean Squared Error as Mean Squared Error on the Y-axis and the log of alphas on the X-axis**
-
-
-
- **9) We took the individual coefficient paths and plotted them against alphas.**
 
 ![alt text](https://github.com/kyle-black/regression_case_study/blob/main/images/ridge_regression_standard_coefficient_paths.png)
+
+
+
+**8) We took the individual coefficient paths and plotted them against alphas.**
+
+
 ![alt test](https://github.com/lraganit-star/regression_case_study/blob/main/images/ridge_regression_train_test_MSE.png)
 
 **10)We repeated the same process, but this time we used Lasso regression.**
