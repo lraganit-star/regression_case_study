@@ -52,4 +52,7 @@ Then plotted the Ridge Regression Train and Test Mean Squared error. With Mean S
 ![alt text](https://github.com/kyle-black/regression_case_study/blob/main/images/ridge_regression_standard_coefficient_paths.png)
 
 
-**10)
+**10)We repeated the same process, but this time we used Lasso regression.
+
+
+![alt text](https://github.com/lraganit-star/regression_case_study/blob/main/images/LASSO_regression_standardized_coefficient_paths_pt2.png)
