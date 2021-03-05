@@ -17,8 +17,8 @@ We found the following columns had Pearson correlations above .25.:
 
 
 
-
-**3) Our next step was to Train-Test-Split our data and set up our method of cross validation and set our Test Data validation to .25.**
+ 
+ **3) Our next step was to Train-Test-Split our data and set up our method of cross validation and set our Test Data validation to .25.**
 
 
 **4) We fit Ridge regression, leaving out geographic data columns that were nonsensical to the tests we were running. **
@@ -47,7 +47,7 @@ Then plotted the Ridge Regression Train and Test Mean Squared error. With Mean S
 
 
 
-**9) We took the individual coefficient paths and plotted them against alphas.**
+ **9) We took the individual coefficient paths and plotted them against alphas.**
 
 ![alt text](https://github.com/kyle-black/regression_case_study/blob/main/images/ridge_regression_standard_coefficient_paths.png)
 
