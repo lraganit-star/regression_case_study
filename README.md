@@ -2,7 +2,7 @@
 # HIV Regression Case Study
 
 
-Using the merged HIV models. We wanted to find out with combination of predictors (X) created the best prediction of out target (Y). In our case we want to compare OLS regression against Ridge Regression and Lasso Regression to see which model return the lowest Mean Squared Error. 
+Using the merged HIV models. We wanted to find out which combination of predictors (X) created the best prediction for our target (Y). In our case we want to compare OLS regression against Ridge Regression and Lasso Regression to see which model return the lowest Mean Squared Error. 
 
 Then we will take the best model and features to fit our new regression line.
 
@@ -21,7 +21,7 @@ We found the following columns had Pearson correlations above .25.:
 **3) Our next step was to Train-Test-Split our data and set up our method of cross validation and set our Test Data validation to .25.**
 
 
-**4) We fit Ridge regression, leaving out Geographic data columns that were nonsensical to the tests we were running. **
+**4) We fit Ridge regression, leaving out geographic data columns that were nonsensical to the tests we were running. **
 
 
 **5) We wrote a function to find the Mean Squared error of our Ridge Regression on our Test and predicted Y values: **
