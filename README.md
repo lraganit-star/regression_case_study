@@ -48,11 +48,6 @@ alpha = 2950
 ![alt test](https://github.com/lraganit-star/regression_case_study/blob/main/images/ridge_regression_train_test_MSE.png)
 
 
-
-![alt text](https://github.com/kyle-black/regression_case_study/blob/main/images/ridge_regression_standard_coefficient_paths.png)
-
-
-
 **8) We took the individual coefficient paths and plotted them against alphas.**
 
 ![alt text](https://github.com/kyle-black/regression_case_study/blob/main/images/ridge_regression_standard_coefficient_paths.png)
