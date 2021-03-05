@@ -9,11 +9,9 @@ Using the merged HIV models. We wanted to find out which combination of predicto
 
 **1) We took in the merged Data Frames and dropped the nan values.**
 
-
 **2) During our EDA we looked at the The initial  Pearson correlations between the features as it related to our target variable  “HIVprevalence” (#of cases / population).** 
 
 We found the following columns had Pearson correlations above .25.:
-
 
 **HIV drag, HIV inched  MH_fac      Med_mh_Fac.  Med_sa_fac    Med SMAT _fac.   TMAT.    Plhiv.  SmATred_fac          Tmat_fa              bup_phys.         %msm12month           %msm5ye**    
 
@@ -27,8 +25,9 @@ We found the following columns had Pearson correlations above .25.:
 
 
 **5) We wrote a function to find the Mean Squared error of our Ridge Regression on our Test values and predicted Y values:**
-
 We found the Mean Squared Error with an alpha (lambda) at .05 to be **20317.47**.
+
+
 
 
 **6) In a 10 fold cross validation function we estimated the error of the model using our Ridge Regression:**
@@ -56,10 +55,10 @@ alpha = 2950
 
 **8) We took the individual coefficient paths and plotted them against alphas.**
 
+![alt text](https://github.com/kyle-black/regression_case_study/blob/main/images/ridge_regression_standard_coefficient_paths.png)
 
-![alt test](https://github.com/lraganit-star/regression_case_study/blob/main/images/ridge_regression_train_test_MSE.png)
 
-**10)We repeated the same process, but this time we used Lasso regression.**
+**9)We repeated the same process, but this time we used Lasso regression.**
 
 
 ![alt text](https://github.com/lraganit-star/regression_case_study/blob/main/images/LASSO_regression_standardized_coefficient_paths_pt2.png)
