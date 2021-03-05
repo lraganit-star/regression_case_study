@@ -61,7 +61,7 @@ alpha = 2950
 
 The optimal alpha for the lasso regression is : **0.0009636864286572604**
 
-**10) We compared the RSS for our Ridge, Lasso and Linear Regression:
+**10) We compared the RSS for our Ridge, Lasso and Linear Regression:**
  
  Final Ridge RSS: 0.633
  
@@ -88,4 +88,22 @@ The optimal alpha for the lasso regression is : **0.0009636864286572604**
  ![alt text](https://github.com/lraganit-star/regression_case_study/blob/main/images/LASSO_regression_standardized_coefficient_paths_pt2.png)
 
  ![alt test](https://github.com/lraganit-star/regression_case_study/blob/main/images/OLS_pt2.png)
+ 
+ **14) On the Lasso the optimum value  optimum value = .0001 to build our final model and predict our test data set.**   
+ 0.98764559 ->   PLHIV
+
+
+-0.62862003 ->Population  
+ 
+
+train error:  0.4153929529165977
+
+
+test error:  0.5253714763428131
+  
+ 
+
+
+ 
+ 
 
